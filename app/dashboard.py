@@ -35,7 +35,7 @@ if st.button("Predict"):
         st.success(f"Predicted Sales: {result['predicted_sales']}")
 
        
-        # 📊 CHART SECTION (ADD HERE)
+        # 📊 CHART SECTION 
        
 
         df_chart = df.copy()

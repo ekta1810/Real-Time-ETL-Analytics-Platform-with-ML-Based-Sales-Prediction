@@ -34,13 +34,13 @@ if st.button("Predict"):
         result = response.json()
         st.success(f"Predicted Sales: {result['predicted_sales']}")
 
-        # =========================
+       
         # 📊 CHART SECTION (ADD HERE)
-        # =========================
+       
 
         df_chart = df.copy()
 
-        # Encode same way as training
+       
         df_chart["product"] = df_chart["product"].astype("category").cat.codes
         df_chart["region"] = df_chart["region"].astype("category").cat.codes
 

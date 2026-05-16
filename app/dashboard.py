@@ -22,7 +22,9 @@ price = st.number_input("Price", value=0)
 if st.button("Predict"):
     try:
         response = requests.post(
-            "http://127.0.0.1:8000/predict",
+            "https://real-time-etl-analytics-platform-with-ml.onrender.com
+
+",
             json={
                 "product": product,
                 "region": region,
@@ -48,7 +50,9 @@ if st.button("Predict"):
 
         for i in range(len(df_chart)):
             response = requests.post(
-                "http://127.0.0.1:8000/predict",
+                "https://real-time-etl-analytics-platform-with-ml.onrender.com
+
+",
                 json={
                     "product": int(df_chart.iloc[i]["product"]),
                     "region": int(df_chart.iloc[i]["region"]),
